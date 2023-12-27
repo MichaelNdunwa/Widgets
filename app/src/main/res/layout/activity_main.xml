@@ -7,23 +7,14 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/radioButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:text="Radio Group"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/radioButton2"
+        android:id="@+id/radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Radio Button"
+        android:layout_marginTop="212dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioButton1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/seekBar"
@@ -32,7 +23,7 @@
         android:text="Seek Bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioButton2" />
+        app:layout_constraintTop_toBottomOf="@id/radioButton" />
 
     <Button
         android:id="@+id/toggleButton"

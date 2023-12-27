@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        radioButton = findViewById(R.id.radioButton2)
+        radioButton = findViewById(R.id.radioButton)
         seekBar = findViewById(R.id.seekBar)
         toggleButton = findViewById(R.id.toggleButton)
         checkBox1 = findViewById(R.id.checkBox1)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
 
         radioButton.setOnClickListener {
-            val explicitIntent = Intent(this, RadioButton::class.java)
+            val explicitIntent = Intent(this, RadioButtonActivity::class.java)
             startActivity(explicitIntent)
         }
         seekBar.setOnClickListener {
@@ -46,7 +46,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /*fun explicitIntent(context: Context, c: Class<Any>) {
-        startActivity(Intent(context, c::class.java))
-    }*/
 }
