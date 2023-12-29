@@ -21,10 +21,14 @@ class RadioButtonActivity : AppCompatActivity() {
             radioButton = findViewById(checkedId)
 
             when (radioButton.id) {
-                R.id.yesRadioButton -> Snackbar.make(radioButton, "Lover boy 😍, congratulations though 🥳", Snackbar.LENGTH_SHORT).show()
-                R.id.noRadioButton -> Snackbar.make(radioButton, "Oga go and find a girlfriend.", Snackbar.LENGTH_SHORT).show()
-                R.id.maybeRadioButton -> Snackbar.make(radioButton, "Oga talk joor, who is she?", Snackbar.LENGTH_SHORT).show()
+                R.id.yesRadioButton -> showSnackBar("Lover boy 😍, congratulations though 🥳")
+                R.id.noRadioButton -> showSnackBar("Oga go and find a girlfriend.")
+                R.id.maybeRadioButton -> showSnackBar("Oga talk joor, who is she?")
             }
         }
+    }
+
+    private fun showSnackBar(message: String) {
+        Snackbar.make(radioGroup, message, Snackbar.LENGTH_SHORT).show()
     }
 }
