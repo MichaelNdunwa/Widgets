@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckBox">
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="Which progamming languages/language do you know?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/kotlinCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Kotlin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@id/questionTextView" />
+
+    <CheckBox
+        android:id="@+id/javaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@id/kotlinCheckBox" />
+
+    <CheckBox
+        android:id="@+id/pythonCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Python"
+        app:layout_constraintEnd_toEndOf="@id/questionTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@id/javaCheckBox" />
+
+    <CheckBox
+        android:id="@+id/dartCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dart"
+        app:layout_constraintEnd_toEndOf="@id/questionTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@id/pythonCheckBox" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/questionTextView"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="@id/questionTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/dartCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/answerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/submitButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
