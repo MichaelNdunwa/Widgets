@@ -4,14 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.michael.widgets.RadioButtonActivity as RadioButtonActivity1
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var radioButton: Button
     private lateinit var seekBar: Button
     private lateinit var toggleButton: Button
-    private lateinit var checkBox1: Button
-    private lateinit var checkBox2: Button
+    private lateinit var checkBox: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,30 +20,39 @@ class MainActivity : AppCompatActivity() {
         radioButton = findViewById(R.id.radioButton)
         seekBar = findViewById(R.id.seekBar)
         toggleButton = findViewById(R.id.toggleButton)
-        checkBox1 = findViewById(R.id.checkBox1)
-        checkBox2 = findViewById(R.id.checkBox2)
+        checkBox = findViewById(R.id.checkBox)
 
 
-        radioButton.setOnClickListener {
-            val explicitIntent = Intent(this, RadioButtonActivity::class.java)
-            startActivity(explicitIntent)
-        }
-        seekBar.setOnClickListener {
-            val explicitIntent = Intent(this, Seek_Bar::class.java)
-            startActivity(explicitIntent)
-        }
-        toggleButton.setOnClickListener {
-            val explicitIntent = Intent(this, Toggle_Button::class.java)
-            startActivity(explicitIntent)
-        }
-        checkBox1.setOnClickListener {
-            val explicitIntent = Intent(this, CheckBox1::class.java)
-            startActivity(explicitIntent)
-        }
-        checkBox2.setOnClickListener {
-            val explicitIntent = Intent(this, CheckBox2::class.java)
-            startActivity(explicitIntent)
-        }
+        /* radioButton.setOnClickListener {
+             val explicitIntent = Intent(this, RadioButtonActivity::class.java)
+             startActivity(explicitIntent)
+         }
+         seekBar.setOnClickListener {
+             val explicitIntent = Intent(this, Seek_Bar::class.java)
+             startActivity(explicitIntent)
+         }
+         toggleButton.setOnClickListener {
+             val explicitIntent = Intent(this, Toggle_Button::class.java)
+             startActivity(explicitIntent)
+         }
+         checkBox1.setOnClickListener {
+             val explicitIntent = Intent(this, CheckBox1::class.java)
+             startActivity(explicitIntent)
+         }
+         checkBox2.setOnClickListener {
+             val explicitIntent = Intent(this, CheckBox2::class.java)
+             startActivity(explicitIntent)
+         }
+     }*/
+        radioButton.setOnClickListener { explicitIntent(RadioButtonActivity1::class.java) }
+        seekBar.setOnClickListener { explicitIntent(Seek_Bar::class.java) }
+        toggleButton.setOnClickListener { explicitIntent(Toggle_Button::class.java) }
+        checkBox.setOnClickListener { explicitIntent(CheckBox::class.java) }
+    }
+
+    private fun explicitIntent(classes: Class<*>) {
+        val explicitIntent = Intent(this, classes)
+        startActivity(explicitIntent)
     }
 
 }
