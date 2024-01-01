@@ -45,9 +45,9 @@ class MainActivity : AppCompatActivity() {
          }
      }*/
         radioButton.setOnClickListener { explicitIntent(RadioButtonActivity1::class.java) }
-        seekBar.setOnClickListener { explicitIntent(Seek_Bar::class.java) }
-        toggleButton.setOnClickListener { explicitIntent(Toggle_Button::class.java) }
-        checkBox.setOnClickListener { explicitIntent(CheckBox::class.java) }
+        seekBar.setOnClickListener { explicitIntent(SeekBarActivity::class.java) }
+        toggleButton.setOnClickListener { explicitIntent(ToggleButtonActivity::class.java) }
+        checkBox.setOnClickListener { explicitIntent(CheckBoxActivity::class.java) }
     }
 
     private fun explicitIntent(classes: Class<*>) {

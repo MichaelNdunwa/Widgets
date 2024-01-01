@@ -6,7 +6,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 
-class Seek_Bar : AppCompatActivity() {
+class SeekBarActivity : AppCompatActivity() {
 
     private lateinit var seekBarDisplay: TextView
     private lateinit var seekBar: SeekBar

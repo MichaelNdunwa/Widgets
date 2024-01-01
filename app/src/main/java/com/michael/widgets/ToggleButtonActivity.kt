@@ -6,7 +6,7 @@ import android.widget.ImageView
 import android.widget.ToggleButton
 import com.google.android.material.snackbar.Snackbar
 
-class Toggle_Button : AppCompatActivity() {
+class ToggleButtonActivity : AppCompatActivity() {
 
     private lateinit var bulbLight: ImageView
     private lateinit var bulbSwitch: ToggleButton
